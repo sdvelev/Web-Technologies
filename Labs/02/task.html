@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<h2 style="text-align: center">Регистрация</h2>
+<form method="get" style="text-align: center">
+    <p>
+        <label for="mail">Имейл:</label>
+        <input id="mail" type="email" name="email" placeholder="john@gmail.com" required/>
+    </p>
+    <p>
+        <label for="pass">Парола:</label>
+        <input id="pass" type="password" name="pass" placeholder="******" required/>
+    </p>
+    <p>
+        <label for="repass">Повтори паролата:</label>
+        <input id="repass" type="password" name="repass" placeholder="******" required/>
+    </p>
+    <p>
+        <label for="birth">Дата на раждане:</label>
+        <input id="birth" type="date" name="birthdate" value="2000-01-01"/>
+    </p>
+    <p>Пол:
+            <input id="male" type="radio" name="gender" value="m" checked/>
+            <label for="male">Мъж</label>
+            <input id="female" type="radio" name="gender" value="f"/>
+            <label for="female">Жена</label>
+            <input id="other" type="radio" name="gender" value="o"/>
+            <label for="other">Друг</label>
+    </p>
+    <p>
+        <label for="lang">Език:</label>
+        <select id="lang" name="language">
+            <option>Английски</option>
+            <option>Български</option>
+            <option>Немски</option>
+            <option>Френски</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" value="Регистрация"/>
+    </p>
+</form>
+</body>
+</html>
