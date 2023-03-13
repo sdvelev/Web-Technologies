@@ -1,0 +1,1 @@
+<sup>Copyright &copy; 2023, Stefan Velev</sup>
