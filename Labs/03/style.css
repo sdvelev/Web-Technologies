@@ -1,0 +1,34 @@
+.rounded {
+    border-radius: 4px;
+    padding: 3px;
+    border-style: solid;
+    border-color: navy;
+}
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, serif;
+}
+label {
+    font-weight: bold;
+    font-size: 17px;
+}
+input[type="submit"] {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+}
+#frame {
+    border-style: solid;
+    border-color: navy;
+    padding: 20px;
+    display: inline-block;
+    background-color: aquamarine;
+    margin-left: 540px;
+}
+#frame input[type]:not([type="radio"]) {
+    width: 100%;
+}
+#reg {
+    align-content: center
+}

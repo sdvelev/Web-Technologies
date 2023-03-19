@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Регистрация</title>
+</head>
+<body>
+<div id="frame">
+<h2>РЕГИСТРАЦИЯ</h2>
+<form method="get">
+    <p>
+        <label for="mail">Имейл:</label>
+        <input id="mail" class="rounded" type="email" name="email" placeholder="john@gmail.com" required/>
+    </p>
+    <p>
+        <label for="pass">Парола:</label>
+        <input id="pass" class="rounded" type="password" name="pass" placeholder="******" required/>
+    </p>
+    <p>
+        <label for="repass">Повтори паролата:</label>
+        <input id="repass" class="rounded" type="password" name="repass" placeholder="******" required/>
+    </p>
+    <p>
+        <label for="birth">Дата на раждане:</label>
+        <input id="birth" class="rounded" type="date" name="birthdate" value="2000-01-01"/>
+    </p>
+    <p><label>Пол:</label>
+        <input id="male" type="radio" name="gender" value="m" checked/>
+        <label for="male">Мъж</label>
+        <input id="female" type="radio" name="gender" value="f"/>
+        <label for="female">Жена</label>
+        <input id="other" type="radio" name="gender" value="o"/>
+        <label for="other">Друг</label>
+    </p>
+    <p>
+        <label for="lang">Език:</label>
+        <select id="lang" class="rounded" name="language">
+            <option>Английски</option>
+            <option>Български</option>
+            <option>Немски</option>
+            <option>Френски</option>
+        </select>
+    </p>
+    <p>
+        <input type="submit" id="reg" class="rounded" value="Регистрация"/>
+    </p>
+</form>
+</div>
+</body>
+</html>
