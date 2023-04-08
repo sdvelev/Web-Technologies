@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My form</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+<main>
+    <form id="registration-form">
+        <div class="form-element-container">
+            <input type="text" name="username" placeholder="Потребителско име" class="form-element"/>
+        </div>
+        <div class="form-element-container">
+            <input type="password" name="password" placeholder="Парола" class="form-element"/>
+        </div>
+        <div class="form-element-container">
+            <input type="text" name="phone" placeholder="Телефон" class="form-element"/>
+        </div>
+        <div class="form-element-container">
+            <input type="email" name="email" placeholder="Имейл адрес" class="form-element"/>
+        </div>
+        <div class="form-element-container">
+            <select class="form-element">
+                <option value="owner" selected>Собственик</option>
+                <option value="tenant">Наемател</option>
+            </select>
+        </div>
+        <div class="form-element-container">
+            <input type="number" name="flat-number" placeholder="Номер на апартамента" class="form-element"/>
+        </div>
+        <div class="form-element-container">
+            <input type="submit" name="register" value="Регистрирай ме!" class="form-element"/>
+        </div>
+    </form>
+</main>
+</body>
+</html>
