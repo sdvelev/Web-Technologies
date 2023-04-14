@@ -111,6 +111,19 @@ section table td, th {
 section table th {
     background-color: #ffa792;
 }
+
+.example td:first-child {
+    font-size: 17px;
+    text-align: center;
+}
+
+/*
+.example input[type="text"] {
+    height: 30px;
+    padding: 3px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}*/
 /*
 aside ul li a:active {
     color: #f3d5c3;

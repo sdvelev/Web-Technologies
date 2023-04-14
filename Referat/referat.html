@@ -15,7 +15,7 @@
             <li><a href="#introduction">Увод</a></li>
             <li><a href="#html5">HTML5 - същност и нововъведения</a></li>
             <li><a href="#semantic">Семантичен HTML</a></li>
-            <li><a href="">Форми в HTML5</a></li>
+            <li><a href="#forms">Форми в HTML5</a></li>
             <li><a href="">Примери</a></li>
             <li><a href="">Заключение</a></li>
             <li><a href="">Източници</a></li>
@@ -361,7 +361,8 @@
                 </td>
                 <td>
                     Секционният елемент представя цялостен отделен поддокумент или секция на приложението. В този
-                    контекст, секция е <strong>тематична група от съдържание</strong>, което обикновено включва заглавна част. Примери за
+                    контекст, секция е <strong>тематична група от съдържание</strong>, което обикновено включва заглавна
+                    част. Примери за
                     секции са глави на книга, отделните раздели на някакъв диалогов прозорец, номерираните раздели на
                     даден проект и др. Началната страница на уеб сайт може да бъде разделена на отделни секции за
                     въведение, новини, информация за контакт
@@ -383,7 +384,8 @@
                     <pre>&lt;aside></pre>
                 </td>
                 <td>
-                    Представлява <strong>страничен елемент</strong>, раздел от страница, който се състои от съдържание, допирателно
+                    Представлява <strong>страничен елемент</strong>, раздел от страница, който се състои от съдържание,
+                    допирателно
                     свързано със съдържанието около страничния елемент и което може да се счита за отделно от това
                     съдържание. Такива секции често се представят като странични полета (области) в печатната
                     типография. Елементът може да се използва за типографски ефекти като отделяне на текст в кавички,
@@ -406,7 +408,8 @@
                     <pre>&lt;footer></pre>
                 </td>
                 <td>
-                    Елементът представя частта на <strong>долния колонтитул</strong>. Обикновено съдържа информация за неговата секция
+                    Елементът представя частта на <strong>долния колонтитул</strong>. Обикновено съдържа информация за
+                    неговата секция
                     като кой е авторът ѝ, връзки към подобни документи, данни за авторски права и др. Не е необходимо
                     долните колонтитули да се появяват в края на раздел (секция), въпреки че това често се случва.
                     Елементите могат да обхващат множество информация, която обикновено се разделя с помощта на отделни
@@ -455,7 +458,8 @@
                     <pre>&lt;figure></pre>
                 </td>
                 <td>
-                    Елементът обхваща <strong>самостоятелно</strong>, само по себе си, съдържание като илюстрация, диаграма, изображение,
+                    Елементът обхваща <strong>самостоятелно</strong>, само по себе си, съдържание като илюстрация,
+                    диаграма, изображение,
                     парче код и т.н.
                 </td>
             </tr>
@@ -464,7 +468,8 @@
                     <pre>&lt;figcaption></pre>
                 </td>
                 <td>
-                    Елементът дефинира <strong>заглавие</strong> за елемента <strong>&lt;figure></strong>. Може да е първо или последно
+                    Елементът дефинира <strong>заглавие</strong> за елемента <strong>&lt;figure></strong>. Може да е
+                    първо или последно
                     дете на <strong>&lt;figure></strong>
                 </td>
             </tr>
@@ -481,8 +486,268 @@
                     <pre>&lt;summary></pre>
                 </td>
                 <td>
-                    Дефинира <strong>видимо</strong> заглавие (<em>обобщение</em>) на <strong>&lt;details></strong> елемента
+                    Дефинира <strong>видимо</strong> заглавие (<em>обобщение</em>) на <strong>&lt;details></strong>
+                    елемента
                 </td>
+            </tr>
+        </table>
+    </section>
+    <section id="forms">
+        <header>
+            <h2>Форми в HTML5</h2>
+        </header>
+        <p>
+            В HTML5 може да създадем форма чрез семантичния таг <strong>&lt;form></strong>. Чрез елемента
+            <strong>&lt;input></strong>, комбиниран с атрибути <strong>type</strong> със стойност <em>text</em>,
+            <em>password</em> или <em>submit</em> може да направим една най-обикновена форма. В <strong>HTML5</strong>
+            се въвеждат множество нови <strong>input</strong> типове, които може да използваме. Особеното за тях е, че
+            трябва да бъдем внимателни с употребата им в някои случаи, защото все още има някои браузъри, които е
+            възможно да не разпознават и поддържат дадени тип на <strong>input</strong>. Ще разгледаме някои
+            нововъведения в <strong>HTML5</strong> по отношение на формите.
+        </p>
+        <p>
+            Насочващият текст в дадено текстово поле представлява т.нар. <strong>placeholder text</strong>. Той се
+            визуализира тогава когато полето е празно и не е избрано. Когато започнем да въвеждаме текст в него,
+            текстът отстъпва място на нашето съдържание. Конкретния синтаксис и начин на визуализиране може да видим
+            по-долу:
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="text" <strong>placeholder</strong>="Текст в placeholder"></pre>
+                </td>
+                <td><input type="text" placeholder="Текст в placeholder"></td>
+            </tr>
+        </table>
+        <p>
+            Друго нововъведение в <strong>HTML5</strong> е задаването на автофокус на полета (<em>autofocus fields</em>).
+            Това става чрез въвеждането на булев атрибут <strong>autofocus</strong>, който се слага в дадено текстово
+            поле
+            (<em>input</em>) и веднага щом уеб страницата зареди, конкретното текстово поле става избрано автоматично
+            без да трябва ние да го избираме с мишката или клавиатурата.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="text" placeholder="Потребителско име" <strong>autofocus</strong>></pre>
+                </td>
+                <td><input type="text" placeholder="Потребителско име" autofocus></td>
+            </tr>
+        </table>
+        <p>
+            В <strong>HTML5</strong> съществуват редица нови &lt;input> типове. За всеки от тях съществуват допълнителни
+            атрибути, които могат да им бъдат приложени. Ще ги разгледаме в следващата таблица:
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Описание</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>button</strong>" value="Изпрати"></pre>
+                </td>
+                <td><strong>Бутон</strong> за изпращане, който няма никакво поведение по подразбиране. В атрибута
+                    <em>value</em> се въвежда желания текст върху него
+                </td>
+                <td><input type="button" value="Изпрати"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>checkbox</strong>"></pre>
+                </td>
+                <td>Квадратче за <strong>отметка</strong>, позволяващо на самостоятелни стойности да бъдат избрани или
+                    не
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>color</strong>"></pre>
+                </td>
+                <td>Контрол за специфициране на <strong>цвят</strong> Когато полето е активно, можем да избираме
+                    конкретен цвят
+                </td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>date</strong>"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>дата</strong> (година, месец и ден, без час).
+                    Когато е активно, можем да изберем конкретен ден по удобен за нас начин върху календар
+                </td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>datetime-local</strong>"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>дата</strong> и <strong>час</strong> без часова зона. Когато е
+                    активно, можем да изберем конкретна дата
+                    и време по удобен за нас начин върху календар
+                </td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>email</strong>" placeholder="Имейл"></pre>
+                </td>
+                <td><strong>Текстово поле</strong> за въвеждане на <strong>имейл адрес</strong>. Изглежда по същия начин
+                    като поле за текст, но има валидиращи параметри и използва друго оформление на виртуална клавиатура,
+                    когато съответното устройство и браузър позволяват това
+                </td>
+                <td><input type="email" placeholder="Имейл"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>file</strong>" accept="image/png"></pre>
+                </td>
+                <td>Контрол, който позволява на потребителя да прикачи <strong>файл</strong>. Може да се
+                    използва <em>accept</em> атрибута, за да се дефинира какви типове файлове да може да се прикачват
+                </td>
+                <td><input type="file" accept="image/png"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>hidden</strong>" id="id" name="id" value="123"></pre>
+                </td>
+                <td>Контрол, който не се визуализира, но чиято стойност се изпраща към сървъра.
+                </td>
+                <td><input type="hidden" id="id" name="id" value="123"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>image</strong>" src="./img/search-button.png"></pre>
+                </td>
+                <td><strong>Графичен</strong> еквивалент на <strong>бутона</strong> за изпращане. Визуализира
+                    изображение, което е дефинирано от атрибута
+                    <em>src</em>
+                </td>
+                <td><input type="image" src="./img/search-button.png"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>month</strong>"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>месец</strong> и <strong>година</strong>, без часова зона
+                </td>
+                <td><input type="month"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>number</strong>" placeholder="Номер"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>число</strong>. Визуализира индикатор за промяна на числа. На някои
+                    мобилни устройства
+                    се отваря специална виртуална клавиатура, която е само с числа. Чрез атрибута <em>step</em> може да
+                    се задава стъпката на прескачане между числата. Чрез атрибутите <em>min</em> и <em>max</em> може да
+                    се задава минимална и максимална стойност, която да може да приема полето
+                </td>
+                <td><input type="number" placeholder="Номер"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>password</strong>" placeholder="Парола"></pre>
+                </td>
+                <td>Едноредово текстово поле за <strong>парола</strong>, чиято стойност е <strong>скрита</strong> при
+                    визуализация. Притежава механизъм за известяване потребителя, ако уебсайтът не е сигурен
+                </td>
+                <td><input type="password" placeholder="Парола"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>radio</strong>" name="edu" value="h" checked></pre>
+                </td>
+                <td><strong>Радио бутон</strong>, който дава възможност една възможност от дадено множество с един и същ
+                    атрибут
+                    <em>name</em> да бъде избрана
+                </td>
+                <td><input type="radio" name="edu" value="h" checked></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>range</strong>" min="0" max="100"></pre>
+                </td>
+                <td>Контрол за въвеждане на числа, чиято точна стойност не е толкова важна. Визуализира се като плъзгач,
+                    който по подразбиране заема средната стойност. С атрибутите <em>min</em> и <em>max</em> се задават
+                    граници на интервала.
+                </td>
+                <td><input type="range" min="0" max="100"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>reset</strong>" value="Нулиране"></pre>
+                </td>
+                <td><strong>Бутон</strong>, който <strong>нулира</strong> (възстановява) съдържанието на формата с
+                    началните стойности по подразбиране. Не се препоръчва
+                </td>
+                <td><input type="reset" value="Нулиране"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>search</strong> placeholder="Търсене" </pre>
+                </td>
+                <td>Едноредово <strong>текстово поле</strong> за въвеждане на стрингове за <strong>търсене</strong>.
+                    Разделите на линии автоматично се премахват в това поле. В някои браузъри се добавя и икокнка под
+                    формата на <em>х</em>, която се използва за изтриване на съдържанието на полето
+                </td>
+                <td><input type="search" placeholder="Търсене"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>tel</strong>" placeholder="Телефонен номер"
+ pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>телефонен номер</strong>
+                </td>
+                <td><input type="tel" placeholder="Телефонен номер"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>text</strong>" placeholder="Потребителско име"></pre>
+                </td>
+                <td>Стойността по подразбиране. Едноредово <strong>текстово</strong> поле, от което разделителите на
+                    редове автоматично се премахват
+                </td>
+                <td><input type="text" placeholder="Потребителско име"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>time</strong>" min="09:00" max="17:00"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>време</strong> без часова зона. Чрез атрибутите <em>min</em> и
+                    <em>max</em> могат да се задават минимален и максимален час при въвеждане
+                </td>
+                <td><input type="time" min="09:00" max="17:00"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>url</strong>" placeholder="https://example.com"></pre>
+                </td>
+                <td>Текстово поле за въвеждане на <strong>URL</strong> адрес. Изглежда като текстово поле, но има
+                    валидиращ характер
+                </td>
+                <td><input type="url" placeholder="https://example.com"></td>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;input type="<strong>week</strong>" min="2023-W1" max="2023-W52"></pre>
+                </td>
+                <td>Контрол за въвеждане на <strong>година</strong> и номер на <strong>седмица</strong>.
+                    Чрез атрибутите <em>min</em> и <em>max</em> се задават минимална и максимална стойност на седмица за
+                    дадена година
+                </td>
+                <td><input type="week" min="2023-W1" max="2023-W52"></td>
             </tr>
         </table>
     </section>
