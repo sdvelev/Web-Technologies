@@ -24,7 +24,7 @@ aside {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #316731;
+    background-color: #009665;
 }
 
 aside ul {
@@ -71,7 +71,7 @@ section header h2 {
 }
 
 section p {
-    margin-left: 10px;
+    margin-left: 20px;
     font-size: 16px;
 }
 
@@ -83,8 +83,33 @@ code, pre > code {
     border: 1px solid black;
     border-radius:3px;
     padding: 20px;
-    background-color: #EEEEEE;
+    background-color: #ffa792;
     font-size: 16px;
+}
+
+section table {
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    border-collapse: collapse;
+    margin: auto;
+    width: 85%;
+}
+
+section table td, th {
+    border: 1px solid black;
+    padding: 7px;
+    text-align: center;
+}
+
+#definitions td:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section table th {
+    background-color: #ffa792;
 }
 /*
 aside ul li a:active {
