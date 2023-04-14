@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>My form</title>
-    <link href="./style.css" rel="stylesheet">
+    <title>Регистрация</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <main>
@@ -21,13 +21,15 @@
             <input type="email" name="email" placeholder="Имейл адрес" class="form-element"/>
         </div>
         <div class="form-element-container">
-            <select class="form-element">
-                <option value="owner" selected>Собственик</option>
-                <option value="tenant">Наемател</option>
-            </select>
+                <select class="form-element">
+                    <option value="owner" selected>Собственик</option>
+                    <option value="tenant">Наемател</option>
+                </select>
         </div>
         <div class="form-element-container">
-            <input type="number" name="flat-number" placeholder="Номер на апартамента" class="form-element"/>
+            <!--It could be type="number". However, in Mozilla Firefox type="number" looks differently
+            even while static on screen so the form won't look the same as expected in all browsers-->
+            <input type="text" name="flat-number" placeholder="Номер на апартамента" class="form-element"/>
         </div>
         <div class="form-element-container">
             <input type="submit" name="register" value="Регистрирай ме!" class="form-element"/>
