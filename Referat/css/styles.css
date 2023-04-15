@@ -173,3 +173,41 @@ aside ul li a:active {
     font-weight: bold;
 }
 
+#logo {
+    /*display: flex;*/
+}
+
+#logo figure img {
+    float: right;
+    height: 280px;
+    margin-left: 10px;
+}
+
+#logo figure figcaption {
+    float: right;
+}
+
+#html5features {
+    text-align: center;
+}
+
+#html5features img {
+    height: 440px;
+}
+
+#html5semantic {
+    text-align: center;
+}
+
+#html5semantic img {
+    height: 440px;
+}
+
+
+#html5taxonomy {
+    text-align: center;
+}
+
+#html5taxonomy img {
+    height: 490px;
+}
