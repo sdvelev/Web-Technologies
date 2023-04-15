@@ -16,7 +16,7 @@
             <li><a href="#html5">HTML5 - същност и нововъведения</a></li>
             <li><a href="#semantic">Семантичен HTML</a></li>
             <li><a href="#forms">Форми в HTML5</a></li>
-            <li><a href="">Примери</a></li>
+            <li><a href="#examples">Примери</a></li>
             <li><a href="">Заключение</a></li>
             <li><a href="">Източници</a></li>
         </ul>
@@ -51,7 +51,7 @@
         </header>
         <p>
             <strong>HTML5</strong> не представлява само едно голямо нещо, което цялостно или се поддържа от даден
-            браузър или не. Той е колекция от индивидуални черти (елементи), за които е указано от всеки браузър и
+            браузър, или не. Той е колекция от индивидуални черти (елементи), за които е указано от всеки браузър и
             версия дали ги поддържа или не.
         </p>
         <p>Съществуват редица начини за проверка дали определен браузър поддържа дадена функционалност. Един от тях е
@@ -910,7 +910,7 @@
             <tr>
                 <td style="text-align: left; padding-left: 120px;">
                     <pre>&lt;input type="text" <strong>list="city"</strong> placeholder="Град">
-&lt;<strong>datalist</strong> <strong>id="city"</strong>
+&lt;<strong>datalist</strong> <strong>id="city"</strong>>
     &lt;<strong>option</strong> value="София">
     &lt;<strong>option</strong> value="Пловдив">
     &lt;<strong>option</strong> value="Сливен">
@@ -999,12 +999,14 @@
             </tr>
         </table>
         <p>
-            В HTML5 е възможно и маркирането на полета като <strong>задължителни</strong> във форма. Това може да стане
+            В <strong>HTML5</strong> е възможно и маркирането на полета като <strong>задължителни</strong> във форма.
+            Това може да стане
             чрез добавяне на
             булев атрибут <strong>required</strong> към съответния &lt;input>. По този начин някои браузъри подсказват
             при преминаване с
             мишката над него, че полето е задължително да бъде попълнено. Друга функционалност е, че при изпращане на
-            формата без да е попълнено такова поле, тя не се изпраща и се визуализира съобщение, че това поле е маркирано като
+            формата без да е попълнено такова поле, тя не се изпраща и се визуализира съобщение, че това поле е
+            маркирано като
             задължително и не може да остане празно.
         </p>
         <table class="example">
@@ -1030,7 +1032,335 @@
             </tr>
         </table>
     </section>
-</main>
+    <section id="examples">
+        <header>
+            <h2>Примери</h2>
+        </header>
+        <table>
+            <tr>
+                <th>Обикновен HTML</th>
+                <th>Семантичен HTML</th>
+            </tr>
+            <tr>
+                <td>
+                    <textarea rows="60" cols="80" readonly>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="noindex" />
+  <title>My Weblog</title>
+  <link rel="stylesheet" type="text/css" href="style-original.css" />
+  <link rel="alternate" type="application/atom+xml" title="My Weblog feed" href="/feed/" />
+  <link rel="search" type="application/opensearchdescription+xml" title="My Weblog search" href="opensearch.xml" />
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>My Weblog</h1>
+    <p class="tagline">A lot of effort went into making this effortless.</p>
+
+    <div id="nav">
+      <ul>
+        <li><a href="../semantics.html">home</a></li>
+        <li><a href="../semantics.html">blog</a></li>
+        <li><a href="../semantics.html">gallery</a></li>
+        <li><a href="../semantics.html">about</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="entry">
+    <p class="post-date">October 22, 2009</p>
+    <h2>
+      <a href="../semantics.html" rel="bookmark" title="link to this post">Travel day</a>
+    </h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit felis accumsan turpis pretium tempor. Duis eu turpis nunc, ut euismod nisl. Aliquam erat volutpat. Proin eu eros mollis dui fringilla sodales. Curabitur venenatis tincidunt felis ac congue. Maecenas at odio dui, sit amet congue sapien. Proin placerat feugiat eros, non mollis quam pharetra at. Duis gravida eleifend ligula nec auctor. Fusce nulla diam, fringilla non ultrices in, iaculis eu tellus. Sed mollis consequat turpis sit amet facilisis. Donec pretium luctus aliquet. Curabitur placerat varius purus vel congue. Aliquam erat volutpat. Curabitur vitae eros sed turpis sollicitudin mattis. Morbi venenatis pulvinar nunc, at vulputate massa placerat a. Nam et tortor id nisi consequat tempor eget sit amet risus. Praesent bibendum, velit eu hendrerit porttitor, elit mauris posuere nisl, non pellentesque est leo a quam.</p>
+
+  </div>
+
+  <div class="entry">
+    <p class="post-date">October 17, 2009</p>
+    <h2>
+      <a href="../semantics.html" rel="bookmark" title="link to this post">I'm going to Prague!</a>
+    </h2>
+
+    <p>Sed ante mi, sagittis sed euismod sit amet, convallis et nibh. Etiam sit amet odio dui, id semper turpis. Mauris risus mauris, imperdiet pulvinar vehicula et, hendrerit vitae dui. Phasellus ultrices lacus rhoncus purus posuere rutrum. Maecenas mattis eleifend scelerisque. Nulla quam sem, facilisis ac ultrices et, tincidunt eu dolor. Mauris arcu est, porttitor eu blandit nec, pulvinar sed enim. Praesent diam felis, cursus at facilisis eu, mollis ut elit. Praesent rutrum porta euismod. Nulla facilisi. Suspendisse potenti. In auctor ultricies eleifend. Proin erat dolor, malesuada non tempus nec, tincidunt in mi.</p>
+
+  </div>
+
+  <p class="c sectionSign"></p>
+
+<table id="arc">
+<tr><th>October</th><td></td></tr>
+<tr><th>5</th><td><a href="../semantics.html">Vos vestros servate, meos mihi linquite mores</a></td></tr>
+<tr><th>September</th><td></td></tr>
+<tr><th>30</th><td><a href="../semantics.html">Ut sementem feceris ita metes</a></td></tr>
+<tr><th>August</th><td></td></tr>
+<tr><th>4</th><td><a href="../semantics.html">Risu inepto res ineptior nulla est</a></td></tr>
+<tr><th>July</th><td></td></tr>
+<tr><th>6</th><td><a href="../semantics.html">Vitanda est improba siren desidia</a></td></tr>
+<tr><th>April</th><td></td></tr>
+<tr><th>21</th><td><a href="../semantics.html">Mendacem oportet esse memorem</a></td></tr>
+<tr><th>7</th><td><a href="../semantics.html">Libenter homines id quod volunt credunt</a></td></tr>
+<tr><th>March</th><td></td></tr>
+<tr><th>27</th><td><a href="../semantics.html">Gutta cavat lapidem</a></td></tr>
+<tr><th>21</th><td><a href="../semantics.html">Amoto quaeramus seria ludo</a></td></tr>
+<tr><th>18</th><td><a href="../semantics.html">Non est ars quae ad effectum casu venit</a></td></tr>
+<tr><th>January</th><td></td></tr>
+<tr><th>11</th><td><a href="../semantics.html">Quid rides?...De te fabula narratur</a></td></tr>
+</table>
+
+  <div id="footer">
+
+    <p class=sectionSign>
+
+    <p>&copy; 2009 <a href="../semantics.html">Mark Pilgrim</a></p>
+
+  </div>
+
+</body>
+</html>
+                    </textarea>
+                </td>
+                <td>
+                    <textarea rows="60" cols="80" readonly>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <title>My Weblog</title>
+  <!--[if lt IE 9]><script src="../j/html5.js"></script><![endif]-->
+  <link rel="stylesheet" href="style-html5.css" />
+  <link rel="alternate" type="application/atom+xml" title="My Weblog feed" href="/feed/" />
+  <link rel="search" type="application/opensearchdescription+xml" title="My Weblog search" href="opensearch.xml" />
+</head>
+
+<body>
+
+  <header>
+
+    <hgroup>
+      <h1>My Weblog</h1>
+      <h2>A lot of effort went into making this effortless.</h2>
+    </hgroup>
+
+    <nav>
+      <ul>
+        <li><a href="../semantics.html">home</a></li>
+        <li><a href="../semantics.html">blog</a></li>
+        <li><a href="../semantics.html">gallery</a></li>
+        <li><a href="../semantics.html">about</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <article>
+    <header>
+      <time datetime="2009-10-22" pubdate>October 22, 2009</time>
+      <h1>
+        <a href="../semantics.html" rel="bookmark" title="link to this post">Travel day</a>
+      </h1>
+    </header>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit felis accumsan turpis pretium tempor. Duis eu turpis nunc, ut euismod nisl. Aliquam erat volutpat. Proin eu eros mollis dui fringilla sodales. Curabitur venenatis tincidunt felis ac congue. Maecenas at odio dui, sit amet congue sapien. Proin placerat feugiat eros, non mollis quam pharetra at. Duis gravida eleifend ligula nec auctor. Fusce nulla diam, fringilla non ultrices in, iaculis eu tellus. Sed mollis consequat turpis sit amet facilisis. Donec pretium luctus aliquet. Curabitur placerat varius purus vel congue. Aliquam erat volutpat. Curabitur vitae eros sed turpis sollicitudin mattis. Morbi venenatis pulvinar nunc, at vulputate massa placerat a. Nam et tortor id nisi consequat tempor eget sit amet risus. Praesent bibendum, velit eu hendrerit porttitor, elit mauris posuere nisl, non pellentesque est leo a quam.</p>
+
+  </article>
+
+  <article>
+    <header>
+      <time datetime="2009-10-17" pubdate>October 17, 2009</time>
+      <h1>
+        <a href="../semantics.html" rel="bookmark" title="link to this post">I'm going to Prague!</a>
+      </h1>
+    </header>
+
+    <p>Sed ante mi, sagittis sed euismod sit amet, convallis et nibh. Etiam sit amet odio dui, id semper turpis. Mauris risus mauris, imperdiet pulvinar vehicula et, hendrerit vitae dui. Phasellus ultrices lacus rhoncus purus posuere rutrum. Maecenas mattis eleifend scelerisque. Nulla quam sem, facilisis ac ultrices et, tincidunt eu dolor. Mauris arcu est, porttitor eu blandit nec, pulvinar sed enim. Praesent diam felis, cursus at facilisis eu, mollis ut elit. Praesent rutrum porta euismod. Nulla facilisi. Suspendisse potenti. In auctor ultricies eleifend. Proin erat dolor, malesuada non tempus nec, tincidunt in mi.</p>
+
+  </article>
+
+  <p class="c sectionSign">
+
+<table id="arc">
+<tr><th>October</th><td></td></tr>
+<tr><th>5</th><td><a href="../semantics.html">Vos vestros servate, meos mihi linquite mores</a></td></tr>
+<tr><th>September</th><td></td></tr>
+<tr><th>30</th><td><a href="../semantics.html">Ut sementem feceris ita metes</a></td></tr>
+<tr><th>August</th><td></td></tr>
+<tr><th>4</th><td><a href="../semantics.html">Risu inepto res ineptior nulla est</a></td></tr>
+<tr><th>July</th><td></td></tr>
+<tr><th>6</th><td><a href="../semantics.html">Vitanda est improba siren desidia</a></td></tr>
+<tr><th>April</th><td></td></tr>
+<tr><th>21</th><td><a href="../semantics.html">Mendacem oportet esse memorem</a></td></tr>
+<tr><th>7</th><td><a href="../semantics.html">Libenter homines id quod volunt credunt</a></td></tr>
+<tr><th>March</th><td></td></tr>
+<tr><th>27</th><td><a href="../semantics.html">Gutta cavat lapidem</a></td></tr>
+<tr><th>21</th><td><a href="../semantics.html">Amoto quaeramus seria ludo</a></td></tr>
+<tr><th>18</th><td><a href="../semantics.html">Non est ars quae ad effectum casu venit</a></td></tr>
+<tr><th>January</th><td></td></tr>
+<tr><th>11</th><td><a href="../semantics.html">Quid rides?...De te fabula narratur</a></td></tr>
+</table>
+
+  <footer>
+
+    <p class=sectionSign>
+
+    <p>&copy; 2009 <a href="../semantics.html">Mark Pilgrim</a></p>
+
+  </footer>
+
+</body>
+</html>
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+        <table id="example-form">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;<strong>form</strong>>
+    &lt;<strong>fieldset</strong>>
+        &lt;<strong>legend</strong>>Лексикон&lt;/legend>
+        &lt;<strong>label</strong> for="name">Име:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>text</strong>" id="name" placeholder="Иван">
+        &lt;<strong>label</strong> for="family-name">Фамилия:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>text</strong>" id="family-name" placeholder="Иванов">
+        &lt;<strong>label</strong> for="email">Имейл адрес:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>email</strong>" id="email" placeholder="ivan@gmail.com">
+        &lt;<strong>label</strong> for="ph">Телефон:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>tel</strong>" id="ph" placeholder="088 666 6666">
+        &lt;<strong>label</strong> for="years">Години:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>number</strong>" id="years" placeholder="21" min="1" max="100">
+        &lt;<strong>label</strong> for="birthdate">Дата на раждане:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>date</strong>" id="birthdate">
+        &lt;<strong>label</strong> for="fav-website">Любим сайт:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>url</strong>" id="fav-website" placeholder="https://moodle.org/">
+        &lt;<strong>label</strong> for="fav-img">Любимо изображение:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>file</strong>" accept="image/*" id="fav-img">
+        &lt;<strong>label</strong> for="fav-month">Любим месец:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>text</strong>" list="months" id="fav-month">
+        &lt;<strong>datalist</strong> id="months">
+            &lt;<strong>option</strong> value="Януари">
+            &lt;<strong>option</strong> value="Февруари">
+            &lt;<strong>option</strong> value="Март">
+            &lt;<strong>option</strong> value="Април">
+            &lt;<strong>option</strong> value="Май">
+            &lt;<strong>option</strong> value="Юни">
+            &lt;<strong>option</strong> value="Юли">
+            &lt;<strong>option</strong> value="Август">
+            &lt;<strong>option</strong> value="Септември">
+            &lt;<strong>option</strong> value="Октомври">
+            &lt;<strong>option</strong> value="Ноември">
+            &lt;<strong>option</strong> value="Декември">
+        &lt;/datalist>
+        &lt;<strong>label</strong> for="fav-season">Любим сезон:&lt;/label>
+        &lt;<strong>select</strong> name="season" id="fav-season">
+            &lt;<strong>option</strong> value="spring">Пролет&lt;/option>
+            &lt;<strong>option</strong> value="summer">Лято&lt;/option>
+            &lt;<strong>option</strong> value="autumn">Есен&lt;/option>
+            &lt;<strong>option</strong> value="winter">Зима&lt;/option>
+        &lt;/select>
+        &lt;<strong>label</strong> for="fav-colour">Любим цвят:&lt;/label>
+        &lt;<strong>input</strong> type="<strong>color</strong>" id="fav-colour">
+        &lt;<strong>label</strong> for="mark">Каква е Вашата оценка за реферата?&lt;/label>
+        &lt;<strong>input</strong> type="<strong>range</strong>" id="mark" min="1" max="10">
+        &lt;<strong>input</strong> type="<strong>reset</strong>" value="Изчистване">
+        &lt;<strong>input</strong> type="<strong>submit</strong>" value="Изпращане">
+    &lt;/fieldset>
+&lt;/form></pre>
+                </td>
+                <td>
+                    <form>
+                        <fieldset>
+                            <legend>Лексикон</legend>
+                            <div class="field">
+                                <label for="name">Име:</label>
+                                <input type="text" id="name" placeholder="Иван">
+                            </div>
+                            <div class="field">
+                                <label for="family-name">Фамилия:</label>
+                                <input type="text" id="family-name" placeholder="Иванов">
+                            </div>
+                            <div class="field">
+                                <label for="email">Имейл адрес:</label>
+                                <input type="email" id="email" placeholder="ivan@gmail.com">
+                            </div>
+                            <div class="field">
+                                <label for="ph">Телефон:</label>
+                                <input type="tel" id="ph" placeholder="088 666 6666">
+                            </div>
+                            <div class="field">
+                                <label for="years">Години:</label>
+                                <input type="number" id="years" placeholder="21" min="1" max="100">
+                            </div>
+                            <div class="field">
+                                <label for="birthdate">Дата на раждане:</label>
+                                <input type="date" id="birthdate">
+                            </div>
+                            <div class="field">
+                                <label for="fav-website">Любим сайт:</label>
+                                <input type="url" id="fav-website" placeholder="https://moodle.org/">
+                            </div>
+                            <div class="field">
+                                <label for="fav-img">Любимо изображение:</label>
+                                <input type="file" accept="image/*" id="fav-img">
+                            </div>
+                            <div class="field">
+                                <label for="fav-month">Любим месец:</label>
+                                <input type="text" list="months" id="fav-month">
+                                <datalist id="months">
+                                    <option value="Януари">
+                                    <option value="Февруари">
+                                    <option value="Март">
+                                    <option value="Април">
+                                    <option value="Май">
+                                    <option value="Юни">
+                                    <option value="Юли">
+                                    <option value="Август">
+                                    <option value="Септември">
+                                    <option value="Октомври">
+                                    <option value="Ноември">
+                                    <option value="Декември">
+                                </datalist>
+                            </div>
+                            <div class="field">
+                                <label for="fav-season">Любим сезон:</label>
+                                <select name="season" id="fav-season">
+                                    <option value="spring">Пролет</option>
+                                    <option value="summer">Лято</option>
+                                    <option value="autumn">Есен</option>
+                                    <option value="winter">Зима</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label for="fav-colour">Любим цвят:</label>
+                                <input type="color" id="fav-colour">
+                            </div>
+                            <div class="field">
+                                <label for="mark">Каква е Вашата оценка за реферата?</label>
+                                <input type="range" id="mark" min="1" max="10">
+                            </div>
+                            <div class="field">
+                                <input class="form-buttons" id="reset-button" type="reset" value="Изчистване">
+                                <input class="form-buttons" id="submit-button" type="submit" value="Изпращане">
+                            </div>
+                        </fieldset>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>
 </body>
 </html>

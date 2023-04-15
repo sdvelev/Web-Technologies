@@ -128,3 +128,48 @@ section table th {
 aside ul li a:active {
     color: #f3d5c3;
 }*/
+
+#examples table textarea {
+    resize: none;
+}
+
+#example-form {
+    margin-top: 40px;
+}
+
+#example-form td {
+    text-align: left;
+}
+
+#example-form pre {
+    font-size: 14px;
+}
+
+#example-form .field {
+    margin-top: 20px;
+}
+
+#example-form .field label, legend {
+    font-weight: bold;
+}
+
+#example-form .field input:not(input[type="file"]) {
+    height: 20px;
+    border-radius: 1px;
+}
+
+#example-form .field #reset-button {
+    height: 30px;
+    width: 140px;
+    background-color: #FFA792;
+    font-weight: bold;
+}
+
+#example-form .field #submit-button {
+    height: 30px;
+    width: 140px;
+    margin-left: 20px;
+    background-color: #009665;
+    font-weight: bold;
+}
+
