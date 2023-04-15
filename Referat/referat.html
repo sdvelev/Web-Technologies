@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>HTML5 - част 1: семантични тагове, тагове за форми. Примери</title>
@@ -31,6 +31,7 @@
         <div id="logo">
             <figure>
                 <img src="./img/html5.png" alt="HTML5 logo">
+            </figure>
                 <p><strong>HTML5</strong> е следващото поколение на <strong>HTML</strong> (<em>HyperText Markup
                     Language</em>).
                     Той е език за маркиране, който се
@@ -56,7 +57,8 @@
                     уеб страници. Повечето нови функционалности са изградени на основата на вече съществуващи елементи,
                     което
                     гарантира поддръжката и на по-стари версии на браузъри.</p>
-                <figcaption><strong>Фигура 1:</strong> Официално лого на HTML5</figcaption>
+            <figure>
+            <figcaption><strong>Фигура 1:</strong> Официално лого на HTML5</figcaption>
             </figure>
         </div>
     </section>
@@ -208,15 +210,15 @@
             <h2>Семантичен HTML</h2>
         </header>
         <p>
-            Всеки един <strong>html документ</strong> започва с т.нар. &lt;!DOCTYPE> декларация. Тя не представлява
+            Всеки един <strong>html документ</strong> започва с т.нар. <strong>&lt;!DOCTYPE> декларация</strong>. Тя не представлява
             <em>html таг</em>, а се използва само като информация към браузъра за това какво съдържание да очаква.
             В по-стари документи тази декларация изглежда по по-сложен начин, защото тя реферира към
             <strong>DTD</strong> (<em>Document Type Definition</em>). В <strong>HTML5</strong> е достатъчно да
-            бъде декларирана по следния начин: &lt;!DOCTYPE html>
+            бъде декларирана по следния начин: <strong>&lt;!DOCTYPE html></strong>.
         </p>
         <table>
             <tr>
-                <th>Несемантичен HTML</th>
+                <th>Обикновен HTML</th>
                 <th>Семантичен HTML</th>
             </tr>
             <tr>
@@ -230,6 +232,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 1:</strong> Сравнение между различните видове синтаксис на <strong>&lt;!DOCTYPE></strong> декларацията</span>
         <p>
             Една <strong>HTML</strong> страница е поредица от вложени елементи. Цялата структура на страницата
             представлява дърво. Някои
@@ -249,7 +252,7 @@
         </p>
         <table>
             <tr>
-                <th>Несемантичен HTML</th>
+                <th>Обикновен HTML</th>
                 <th>Семантичен HTML</th>
             </tr>
             <tr>
@@ -263,6 +266,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 2:</strong> Сравнение между различните видове синтаксис на кореновия елемент <strong>&lt;html></strong></span>
         <p>
             Първият дъщерен елемент на кореновия елемент (<strong>&lt;html></strong>) обикновено е елементът
             <strong>&lt;head></strong>. Елементът <strong>&lt;head></strong> съдържа метаданни — информация за
@@ -299,7 +303,7 @@
             <strong>HTTP Content-Type</strong> и декларацията &lt;meta http-equiv> или по-кратката декларация в
             <strong>HTML5</strong> <strong>&lt;meta charset></strong>.
         </p>
-        <table>
+        <table class="example">
             <tr>
                 <th>Обикновен HTML</th>
                 <th>Семантичен HTML</th>
@@ -313,6 +317,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 3:</strong> Сравнение между различните видове синтаксис на <strong>&lt;meta charset></strong> декларацията</span>
         <p>
             Обикновените линкове (<strong>&lt;a href></strong>) в <strong>HTML</strong> просто сочат към друга страница.
             Връзките в
@@ -512,6 +517,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 4:</strong> Дефиниция на някои семантични елементи в <strong>HTML5</strong></span>
         <div id="html5semantic">
             <figure>
                 <img src="./img/html5semantic.png" alt="semantic elements of HTML5">
@@ -550,6 +556,7 @@
                 <td><input type="text" placeholder="Текст в placeholder"></td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 5:</strong> Визуалзация на <strong>placeholder text</strong> в <strong>&lt;input></strong></span>
         <p>
             Друго нововъведение в <strong>HTML5</strong> е задаването на автофокус на полета (<em>autofocus fields</em>).
             Това става чрез въвеждането на булев атрибут <strong>autofocus</strong>, който се слага в дадено текстово
@@ -569,6 +576,7 @@
                 <td><input type="text" placeholder="Потребителско име" autofocus></td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 6:</strong> Визуализация на <strong>autofocus</strong> в <strong>&lt;input></strong></span>
         <p>
             В <strong>HTML5</strong> съществуват редица нови &lt;input> типове. За всеки от тях съществуват допълнителни
             атрибути, които могат да им бъдат приложени. Ще ги разгледаме в следващата таблица:
@@ -777,6 +785,7 @@
                 <td><input type="week" min="2023-W1" max="2023-W52"></td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 7:</strong> Описание и визуализация на типове на <strong>&lt;input></strong></span>
         <p>
             Друг елемент, който често се използва във форми, е <strong>&lt;label></strong> Той дефинира <em>етикет</em>
             към някои други елементи на формата, които изискват някакъв вид вход от потребителя. Този елемент е полезен
@@ -803,6 +812,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 8:</strong> Визуализация на <strong>&lt;label></strong> за даден <strong>&lt;input></strong></span>
         <p>
             За създаване на падащи списъци се използва елементът <strong>&lt;select></strong>. Чрез множество на брой
             тагове
@@ -844,6 +854,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 9:</strong> Визуализация на елемент <strong>&lt;select></strong></span>
         <p>
             Чрез елемента
             <strong>&lt;button></strong> може да създаваме бутони. Някои атрибути, характерни за бутона, са
@@ -866,6 +877,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 10:</strong> Визуализация на елемент <strong>&lt;button></strong></span>
         <p>
             Друг елемент, който може да принадлежи към дадена форма, е <strong>текстовата област</strong>, зададена с
             тага <strong>&lt;textarea></strong>. Той дефинира многоредово текстово поле, което може да се свива и
@@ -891,6 +903,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 11:</strong> Визуализация на елемент <strong>&lt;textarea></strong></span>
         <p>
             Чрез елемента <strong>&lt;fieldset></strong> може да групираме сходни елементи от нашата форма чрез
             ограждането им в правоъгълна рамка. Чрез
@@ -921,6 +934,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 12:</strong> Визуализация на елемент <strong>&lt;fieldset></strong></span>
         <p>
             Елементът
             <strong>&lt;datalist></strong> специфицира списък от предефинирани опции за конкретен
@@ -955,6 +969,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 13:</strong> Визуализация на <strong>&lt;input></strong> елемент със зададен <strong>&lt;datalist></strong></span>
         <p>
             Елементът
             <strong>&lt;output></strong> представлява контейнер, в който може да се визуализира в реално време
@@ -976,8 +991,8 @@
                     <pre>&lt;form <strong>oninput="result.value=parseInt(x.value)+parseInt(y.value)</strong>">
     &lt;input <strong>type="range"</strong> id="x" min="1" max="100">
     +&lt;input <strong>type="number"</strong> id="y" value="60">
-    =&lt;<strong>output</strong> name="result" for="x y"></atrongoutput>
-                        &lt;/form></pre>
+    =&lt;<strong>output</strong> name="result" for="x y">
+&lt;/form></pre>
                 </td>
                 <td>
                     <form oninput="result.value=parseInt(x.value)+parseInt(y.value)">
@@ -989,6 +1004,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 14:</strong> Визуализация на <strong>&lt;output></strong> елемент</span>
         <p>
             Автоматичната валидация на форми е нововъведение в <strong>HTML5</strong>. Нека да си представим проблема с
             въвеждане на имейл адрес в
@@ -1012,7 +1028,7 @@
             </tr>
             <tr>
                 <td style="text-align: left; padding-left: 120px;">
-                    <pre>&lt;form>">
+                    <pre>&lt;form>
     &lt;input <strong>type="email"</strong> placeholder="Имейл">
     &lt;input type="submit" value="Изпращане">
 &lt;/form></pre>
@@ -1025,6 +1041,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 15:</strong> Задължителна <strong>валидация</strong> на имейл за даденото текстово поле</span>
         <p>
             В <strong>HTML5</strong> е възможно и маркирането на полета като <strong>задължителни</strong> във форма.
             Това може да стане
@@ -1058,11 +1075,13 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 16:</strong> Демонстрация на <strong>задължителни</strong> полета във форма</span>
     </section>
     <section id="examples">
         <header>
             <h2>Примери</h2>
         </header>
+        <h3>Пример 1: Семантичен HTML</h3>
         <table>
             <tr>
                 <th>Обикновен HTML</th>
@@ -1249,6 +1268,8 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 17:</strong> Сравнение между две едни и същи уебстраници, едната от които използва <strong>семантичен HTML</strong></span>
+        <h3>Пример 2: Форми в HTML5</h3>
         <table id="example-form">
             <tr>
                 <th>HTML синтаксис</th>
@@ -1387,6 +1408,7 @@
                 </td>
             </tr>
         </table>
+        <span class="table-caption"><strong>Таблица 18:</strong> Визуализация на <strong>форма</strong>, използваща различни видове елементи</span>
     </section>
     <section id="conclusion">
         <header>
@@ -1423,6 +1445,57 @@
         <header>
             <h2>Източници</h2>
         </header>
+        <h3>Списък с фигури</h3>
+        <ul>
+            <li><strong>Фигура 1.</strong> Официално лого на HTML5 <div class="source">Източник: [<a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png</a>], последно посетен на 2023-04-14.</div></li>
+            <li><strong>Фигура 2.</strong> Нови елементи в HTML5 <div class="source">Източник: [<a target="_blank" href="https://www-scf.usc.edu/~chenemil/itp104/images/html5features.jpg">https://www-scf.usc.edu/~chenemil/itp104/images/html5features.jpg</a>], последно посетен на 2023-04-14.</div></li>
+            <li><strong>Фигура 3.</strong> Семантични елементи в HTML5 <div class="source">Източник: [<a target="_blank" href="https://softteco.com/media/Oct-Nov_News/HTML3.png">https://softteco.com/media/Oct-Nov_News/HTML3.png</a>], последно посетен на 2023-04-14.</div></li>
+            <li><strong>Фигура 4.</strong> Таксономия на HTML5 <div class="source">Източник: [<a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HTML5_APIs_and_related_technologies_taxonomy_and_status.svg/1280px-HTML5_APIs_and_related_technologies_taxonomy_and_status.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/HTML5_APIs_and_related_technologies_taxonomy_and_status.svg/1280px-HTML5_APIs_and_related_technologies_taxonomy_and_status.svg.png</a>], последно посетен на 2023-04-14.</div></li>
+        </ul>
+        <h3>Списък с таблици</h3>
+        <ul>
+            <li><strong>Таблица 1.</strong> Сравнение между различните видове синтаксис на <strong>&lt;!DOCTYPE></strong> декларацията</li>
+            <li><strong>Таблица 2.</strong> Сравнение между различните видове синтаксис на кореновия елемент <strong>&lt;html></strong></li>
+            <li><strong>Таблица 3.</strong> Сравнение между различните видове синтаксис на <strong>&lt;meta charset></strong> декларацията</li>
+            <li><strong>Таблица 4.</strong> Дефиниция на някои семантични елементи в <strong>HTML5</strong></li>
+            <li><strong>Таблица 5.</strong> Визуалзация на <strong>placeholder text</strong> в <strong>&lt;input></strong></li>
+            <li><strong>Таблица 6.</strong> Визуализация на <strong>autofocus</strong> в <strong>&lt;input></strong></li>
+            <li><strong>Таблица 7.</strong> Описание и визуализация на типове на <strong>&lt;input></strong></li>
+            <li><strong>Таблица 8.</strong> Визуализация на &lt;label> за даден <strong>&lt;input></strong></li>
+            <li><strong>Таблица 9.</strong> Визуализация на елемент <strong>&lt;select></strong></li>
+            <li><strong>Таблица 10.</strong> Визуализация на елемент <strong>&lt;button></strong></li>
+            <li><strong>Таблица 11.</strong> Визуализация на елемент <strong>&lt;textarea></strong></li>
+            <li><strong>Таблица 12.</strong> Визуализация на елемент <strong>&lt;fieldset></strong></li>
+            <li><strong>Таблица 13.</strong> Визуализация на <strong>&lt;input></strong> елемент със зададен <strong>&lt;datalist></strong></li>
+            <li><strong>Таблица 14.</strong> Визуализация на <strong>&lt;output></strong> елемент</li>
+            <li><strong>Таблица 15.</strong> Задължителна <strong>валидация</strong> на имейл за даденото текстово поле</li>
+            <li><strong>Таблица 16.</strong> Демонстрация на <strong>задължителни</strong> полета във форма</li>
+            <li><strong>Таблица 17.</strong> Сравнение между две едни и същи уебстраници, едната от които използва <strong>семантичен HTML</strong></li>
+            <li><strong>Таблица 18.</strong> Визуализация на <strong>форма</strong>, използваща различни видове елементи</li>
+        </ul>
+        <h3>Използвана литература</h3>
+        <ul>
+            <li id="r1">[1] <strong>Clark</strong>, Richard. <em>HTML5 forms input types</em> [online]. [<a target="_blank" href="http://html5doctor.com/html5-forms-input-types/">http://html5doctor.com/html5-forms-input-types/</a>]. [Публикуван на: 2013-02-28]. [Последно посетен на: 2023-04-14].</li>
+            <li id="r2">[2] <strong>Kyrnin</strong>, Jennifer. <em>Why Use Semantic HTML?</em> [online]. [<a target="_blank" href="https://www.thoughtco.com/why-use-semantic-html-3468271">https://www.thoughtco.com/why-use-semantic-html-3468271</a>]. [Последно актуализиран на: 2020-12-28]. [Последно посетен на: 2023-04-14].</li>
+            <li>[3] <strong>MDN</strong> Web Docs: &lt;button>: The Button element [online]. [<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[4] <strong>MDN</strong> Web Docs: &lt;datalist>: The HTML Data List element [online]. [<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[5] <strong>MDN</strong> Web Docs: &lt;input>: The Input (Form Input) element [online]. [<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[6] <strong>MDN</strong> Web Docs: &lt;button>: The Output element [online]. [<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[7] <strong>MDN</strong> Web Docs: &lt;button>: Semantics [online]. [<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics">https://developer.mozilla.org/en-US/docs/Glossary/Semantics</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[8] <strong>Pilgrim</strong>, Mark. <em>HTML5: Up and Running</em>. 1st ed. O’Reilly, 2010. ISBN 978-0-596-80602-6 [<a target="_blank" href="http://diveintohtml5.info/index.html">http://diveintohtml5.info/index.html</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[9] <strong>Semantic</strong> HTML5 Elements Explained [online]. [<a target="_blank" href="https://www.freecodecamp.org/news/semantic-html5-elements/">https://www.freecodecamp.org/news/semantic-html5-elements/</a>]. [Публикуван на: 2019-12-12]. [Последно посетен на: 2023-04-14].</li>
+            <li>[10] <strong>W3Schools:</strong> HTML Semantic Elements [online]. [<a target="_blank" href="https://www.w3schools.com/html/html5_semantic_elements.asp ">https://www.w3schools.com/html/html5_semantic_elements.asp </a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[11] <strong>W3Schools:</strong> HTML &lt;datalist> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_datalist.asp">https://www.w3schools.com/tags/tag_datalist.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[12] <strong>W3Schools:</strong> HTML &lt;output> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_output.asp">https://www.w3schools.com/tags/tag_output.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[13] <strong>W3Schools:</strong> HTML &lt;fieldset> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_fieldset.asp">https://www.w3schools.com/tags/tag_fieldset.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[14] <strong>W3Schools:</strong> HTML &lt;figure> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_figure.asp">https://www.w3schools.com/tags/tag_figure.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[15] <strong>W3Schools:</strong> HTML &lt;label> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_label.asp">https://www.w3schools.com/tags/tag_label.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[16] <strong>W3Schools:</strong> HTML &lt;mark> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_mark.asp">https://www.w3schools.com/tags/tag_mark.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[17] <strong>W3Schools:</strong> HTML &lt;select> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_select.asp">https://www.w3schools.com/tags/tag_select.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[18] <strong>W3Schools:</strong> HTML &lt;summary> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_summary.asp">https://www.w3schools.com/tags/tag_summary.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[19] <strong>W3Schools:</strong> HTML &lt;textarea> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_textarea.asp">https://www.w3schools.com/tags/tag_textarea.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+            <li>[20] <strong>W3Schools:</strong> HTML &lt;time> Tag [online]. [<a target="_blank" href="https://www.w3schools.com/tags/tag_time.asp">https://www.w3schools.com/tags/tag_time.asp</a>]. [Последно посетен на: 2023-04-14].</li>
+        </ul>
     </section>
 </main>
 </body>

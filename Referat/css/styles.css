@@ -3,7 +3,7 @@ body {
 }
 body > header {
     /*font-family: Roboto, Arial, Helvetica, sans-serif;*/
-    width: 87%;
+    width: 86.85%;
     height: 85px;
     background-color: #E44D26;
     border-bottom: 6px solid #E44D26;
@@ -24,7 +24,8 @@ aside {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #009665;
+    background-color: #299634;
+    color: #299634;
 }
 
 aside ul {
@@ -70,6 +71,12 @@ section header h2 {
     font-size: 30px;
 }
 
+section h3 {
+    margin-left: 50px;
+    font-size: 23px;
+}
+
+
 section p {
     margin-left: 20px;
     font-size: 16px;
@@ -83,7 +90,7 @@ code, pre > code {
     border: 1px solid black;
     border-radius:3px;
     padding: 20px;
-    background-color: #ffa792;
+    background-color: #ABD138;
     font-size: 16px;
 }
 
@@ -100,6 +107,7 @@ section table td, th {
     border: 1px solid black;
     padding: 7px;
     text-align: center;
+    font-size: 17px;
 }
 
 #definitions td:first-child {
@@ -109,7 +117,7 @@ section table td, th {
 }
 
 section table th {
-    background-color: #ffa792;
+    background-color: #ABD138;
 }
 
 .example td:first-child {
@@ -161,7 +169,7 @@ aside ul li a:active {
 #example-form .field #reset-button {
     height: 30px;
     width: 140px;
-    background-color: #FFA792;
+    background-color: #ABD138;
     font-weight: bold;
 }
 
@@ -210,4 +218,24 @@ aside ul li a:active {
 
 #html5taxonomy img {
     height: 490px;
+}
+
+#references ul {
+    list-style-type: none;
+}
+
+#references ul li {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.source {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.table-caption {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
