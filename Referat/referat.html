@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>HTML5 - част 1: семантични тагове, тагове за форми. Примери</title>
@@ -710,7 +710,7 @@
                 </td>
                 <td>Контрол за въвеждане на <strong>телефонен номер</strong>
                 </td>
-                <td><input type="tel" placeholder="Телефонен номер"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
+                <td><input type="tel" placeholder="Телефонен номер" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"></td>
             </tr>
             <tr>
                 <td>
@@ -748,6 +748,285 @@
                     дадена година
                 </td>
                 <td><input type="week" min="2023-W1" max="2023-W52"></td>
+            </tr>
+        </table>
+        <p>
+            Друг елемент, който често се използва във форми, е <strong>&lt;label></strong> Той дефинира <em>етикет</em>
+            към някои други елементи на формата, които изискват някакъв вид вход от потребителя. Този елемент е полезен
+            за екранните четци, защото това устройство ще прочете на глас етикета веднага щом потребителя фокусира
+            дадено
+            текстово или друг вид поле. В допълнение, елементът също помага на потребители, които имат затруднения да
+            изберат малък регион от екрана с мишката (като например радио бутони или квадратчета за отметка), защото,
+            когато потребителят кликне на текста на етикета, радио бутонът, квадратчето за отметка или текстовото поле
+            автоматично се селектира.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;label <strong>for="phone"</strong>>Телефон:&lt;/label>
+&lt;input <strong>id="phone"</strong> type="tel" placeholder="088 123 4567"></pre>
+                </td>
+                <td>
+                    <label for="phone">Телефон:</label>
+                    <input id="phone" type="tel" placeholder="088 123 4567">
+                </td>
+            </tr>
+        </table>
+        <p>
+            За създаване на падащи списъци се използва елементът <strong>&lt;select></strong>. Чрез множество на брой
+            тагове
+            <strong>&lt;option></strong>, вложени в него, се постига добавянето на определени опции, една от които може
+            да бъде избрана. По
+            подразбиране, първият елемент на падащия списък е селектиран. За добавяне на друга опция, която искаме
+            да бъде избрана по подразбиране, може да добавим към елемента булевия атрибут <em>selected</em>. За добавяне
+            на
+            определени опции към група, може да ги оградим с елемента
+            <strong>&lt;optgroup></strong>. Ако искаме падащият списък да позволява избор на повече от една опция, то
+            тогава към дефинирания
+            <strong>&lt;select></strong> елемент може да добавим булевия атрибут <em>multiple</em>.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 200px">
+                    <pre>&lt;label for="edu">Образование:&lt;/label>
+&lt;<strong>select</strong> name="education" id="edu">
+        &lt;<strong>option</strong> value="1">Начално&lt;/option>
+        &lt;<strong>option</strong> value="2">Основно&lt;/option>
+        &lt;<strong>option</strong> value="3">Средно&lt;/option>
+        &lt;<strong>option</strong> value="4">Висше&lt;/option>
+        &lt;<strong>option</strong> value="5">Друго&lt;/option>
+&lt;/select></pre>
+                </td>
+                <td>
+                    <label for="edu">Образование:</label>
+                    <select name="education" id="edu">
+                        <option value="1">Начално</option>
+                        <option value="2">Основно</option>
+                        <option value="3">Средно</option>
+                        <option value="4" selected>Висше</option>
+                        <option value="5" selected>Друго</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Чрез елемента
+            <strong>&lt;button></strong> може да създаваме бутони. Някои атрибути, характерни за бутона, са
+            <em>type</em>, който указва за какво ще
+            се използва бутонът, и <em>form</em>, който специфицира формата, към която бутонът принадлежи. Стойността на
+            последния атрибут трябва да съвпада с тази на <em>id</em> атрибута на
+            <strong>&lt;form></strong> елемента, към който принадлежи.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;<strong>button</strong> type="button" id="button">Бутон&lt;/button></pre>
+                </td>
+                <td>
+                    <button type="button" id="button">Бутон</button>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Друг елемент, който може да принадлежи към дадена форма, е <strong>текстовата област</strong>, зададена с
+            тага <strong>&lt;textarea></strong>. Той дефинира многоредово текстово поле, което може да се свива и
+            разширява. Често се използва във форми за
+            събиране на входове от потребителя като коментар, ревю и др. Може да съдържа неограничен брой символи, като
+            шрифтът се променя с такъв с фиксирана ширина (<em>monospace</em>). Размерът на текстовата кутия може да се
+            специфицира чрез атрибутите <em>cols</em> и <em>rows</em> или чрез <strong>CSS</strong>. Чрез атрибута
+            <em>name</em> съдържанието на текстовата област може да бъде реферирано след подаване на формата. Уникалният
+            <em>id</em> атрибут на текстовата кутия е нужен, за да може да се асоциира с конкретен етикет. Чрез атрибута
+            <em>readonly</em> можем да укажем, че текстова област е предназначена само за четене.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre>&lt;<strong>textarea</strong> id="comm" <strong>rows="6"</strong> <strong>cols="40"</strong> placeholder="Въведете коментар">&lt;/textarea></pre>
+                </td>
+                <td>
+                    <textarea id="comm" rows="6" cols="40" placeholder="Въведете коментар"></textarea>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Чрез елемента <strong>&lt;fieldset></strong> може да групираме сходни елементи от нашата форма чрез
+            ограждането им в правоъгълна рамка. Чрез
+            елемента
+            <strong>&lt;legend></strong> може да посочваме заглавие на областта. С булевия атрибут <em>disabled</em> към
+            елемента
+            <strong>&lt;fieldset></strong> може да забраняваме въвеждането на информация в конкретната група.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 120px;">
+                    <pre>&lt;<strong>fieldset</strong>>
+    &lt;<strong>legend</strong>>Вход&lt;/legend>
+    &lt;input type="text" placeholder="Потребителско име">
+    &lt;input type="password" placeholder="Парола">
+&lt;/fieldset></pre>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Вход</legend>
+                        <input type="text" placeholder="Потребителско име">
+                        <input type="password" placeholder="Парола"><br>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Елементът
+            <strong>&lt;datalist></strong> специфицира списък от предефинирани опции за конкретен
+            <strong>&lt;input></strong> елемент. Използва се за предоставяне на функция за автоматично попълване на
+            <strong>&lt;input></strong> елемент. Потребителите виждат падащ списък от вече дефинирани опции веднага щом
+            започнат да въвеждат някакъв текст. Важно е уникалният атрибут <em>id</em> на
+            <strong>&lt;datalist></strong> да съвпада с <em>list</em> атрибута на даден <strong>&lt;input></strong>.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 120px;">
+                    <pre>&lt;input type="text" <strong>list="city"</strong> placeholder="Град">
+&lt;<strong>datalist</strong> <strong>id="city"</strong>
+    &lt;<strong>option</strong> value="София">
+    &lt;<strong>option</strong> value="Пловдив">
+    &lt;<strong>option</strong> value="Сливен">
+    &lt;<strong>option</strong> value="Варна">
+&lt;/datalist></pre>
+                </td>
+                <td>
+                    <input type="text" list="city" placeholder="Град">
+                    <datalist id="city">
+                        <option value="София">
+                        <option value="Пловдив">
+                        <option value="Сливен">
+                        <option value="Варна">
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Елементът
+            <strong>&lt;output></strong> представлява контейнер, в който може да се визуализира в реално време
+            резултатът от стойностите на
+            два вида <strong>&lt;input></strong> елементи. Например, форма може да включва <strong>&lt;input></strong>
+            под формата на плъзгач, който
+            репрезентира стойности между 1 и 100. Второ текстово поле до него може да бъде друг
+            <strong>&lt;input></strong> елемент с
+            указан тип <strong>type="number"</strong>. В този случай може да се създаде
+            <strong>&lt;output></strong> елемент, който да визуализира резултата от сбора на двата вида входни полета.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 120px;">
+                    <pre>&lt;form <strong>oninput="result.value=parseInt(x.value)+parseInt(y.value)</strong>">
+    &lt;input <strong>type="range"</strong> id="x" min="1" max="100">
+    +&lt;input <strong>type="number"</strong> id="y" value="60">
+    =&lt;<strong>output</strong> name="result" for="x y"></atrongoutput>
+                        &lt;/form></pre>
+                </td>
+                <td>
+                    <form oninput="result.value=parseInt(x.value)+parseInt(y.value)">
+                        <input type="range" id="x" min="1" max="100">
+                        +<input type="number" id="y" value="60">
+                        =
+                        <output name="result" for="x y"></output>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Автоматичната валидация на форми е нововъведение в <strong>HTML5</strong>. Нека да си представим проблема с
+            въвеждане на имейл адрес в
+            уебформа. Вероятно ще имаме валидация от страна на клиента на <strong>JavaScript</strong>, следвана от
+            валидация от страна на
+            сървъра на <strong>PHP</strong> например. <strong>HTML5</strong> не може да замени сървърната валидация, но
+            може да се опита да замени тази
+            при клиента. Когато имаме едно текстово поле с таг <strong>&lt;input></strong> и <em>type="email"</em>, то
+            валидацията на
+            имейла, т.е. проверката за това дали е въведен коректен формат на имейл, се прави от браузъра автоматично за
+            нас. Тя е <strong>RFC</strong> съвместима и остава активна дори и когато скриптирането на браузъра е
+            изключено. С останалите
+            типове като <em>url</em>, <em>number</em> и др. ситуацията е подобна. Това валидиране по подразбиране може
+            да бъде изключено
+            ръчно чрез добавяне на <em>novalidate</em> – булев атрибут към тага <strong>&lt;form></strong>.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 120px;">
+                    <pre>&lt;form>">
+    &lt;input <strong>type="email"</strong> placeholder="Имейл">
+    &lt;input type="submit" value="Изпращане">
+&lt;/form></pre>
+                </td>
+                <td>
+                    <form>
+                        <input type="email" placeholder="Имейл">
+                        <input type="submit" value="Изпращане">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <p>
+            В HTML5 е възможно и маркирането на полета като <strong>задължителни</strong> във форма. Това може да стане
+            чрез добавяне на
+            булев атрибут <strong>required</strong> към съответния &lt;input>. По този начин някои браузъри подсказват
+            при преминаване с
+            мишката над него, че полето е задължително да бъде попълнено. Друга функционалност е, че при изпращане на
+            формата без да е попълнено такова поле, тя не се изпраща и се визуализира съобщение, че това поле е маркирано като
+            задължително и не може да остане празно.
+        </p>
+        <table class="example">
+            <tr>
+                <th>HTML синтаксис</th>
+                <th>Визуализация</th>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 120px;">
+                    <pre>&lt;form>
+    &lt;input type="text" placeholder="Име" <strong>required</strong>>
+    &lt;input type="text" placeholder="Фамилия" <strong>required</strong>>
+    &lt;input type="submit" value="Изпращане">
+&lt;/form></pre>
+                </td>
+                <td>
+                    <form>
+                        <input type="text" placeholder="Име" required>
+                        <input type="text" placeholder="Фамилия" required>
+                        <input type="submit" value="Изпращане">
+                    </form>
+                </td>
             </tr>
         </table>
     </section>
