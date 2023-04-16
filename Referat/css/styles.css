@@ -2,7 +2,6 @@ body {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 body > header {
-    /*font-family: Roboto, Arial, Helvetica, sans-serif;*/
     width: 86.85%;
     height: 85px;
     background-color: #E44D26;
@@ -58,12 +57,6 @@ main {
     width: 86.15%;
     top: 85px;
     left: 200px;
-   /* border: 7px solid blue;*/
-}
-
-section {
-    /*position: absolute;
-    margin-left: 0px;*/
 }
 
 section header h2 {
@@ -83,7 +76,7 @@ section p {
 }
 
 code, pre > code {
-    margin-left: 11px;
+    margin-left: 21px;
     margin-top: 14px;
     margin-bottom: 14px;
     display: block;
@@ -124,18 +117,6 @@ section table th {
     font-size: 17px;
     text-align: center;
 }
-
-/*
-.example input[type="text"] {
-    height: 30px;
-    padding: 3px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-}*/
-/*
-aside ul li a:active {
-    color: #f3d5c3;
-}*/
 
 #examples table textarea {
     resize: none;
@@ -181,13 +162,9 @@ aside ul li a:active {
     font-weight: bold;
 }
 
-#logo {
-    /*display: flex;*/
-}
-
 #logo figure img {
     float: right;
-    height: 280px;
+    height: 266px;
     margin-left: 10px;
 }
 
@@ -210,7 +187,6 @@ aside ul li a:active {
 #html5semantic img {
     height: 440px;
 }
-
 
 #html5taxonomy {
     text-align: center;
@@ -250,4 +226,12 @@ h3 sup {
 
 p sup {
     font-size: 12px;
+}
+
+#content-table9 {
+    text-align: left; padding-left: 200px
+}
+
+#forms .example .table-padding{
+    text-align: left; padding-left: 120px;
 }
