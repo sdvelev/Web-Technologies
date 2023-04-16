@@ -24,7 +24,7 @@ aside {
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #299634;
+    background-color: #346453;
     color: #299634;
 }
 
@@ -46,7 +46,7 @@ aside ul li {
 
 aside ul li a {
     text-decoration: none;
-    color: #cecdc5;
+    color: #C7DDD1;
 }
 
 aside ul li a:hover {
@@ -90,7 +90,7 @@ code, pre > code {
     border: 1px solid black;
     border-radius:3px;
     padding: 20px;
-    background-color: #ABD138;
+    background-color: #FFCC9C;
     font-size: 16px;
 }
 
@@ -117,7 +117,7 @@ section table td, th {
 }
 
 section table th {
-    background-color: #ABD138;
+    background-color: #86B4A3;
 }
 
 .example td:first-child {
@@ -169,7 +169,7 @@ aside ul li a:active {
 #example-form .field #reset-button {
     height: 30px;
     width: 140px;
-    background-color: #ABD138;
+    background-color: #FFCC9C;
     font-weight: bold;
 }
 
@@ -238,4 +238,16 @@ aside ul li a:active {
     display: block;
     text-align: center;
     margin-top: 10px;
+}
+
+h2 sup {
+    font-size: 16px;
+}
+
+h3 sup {
+    font-size: 14px;
+}
+
+p sup {
+    font-size: 12px;
 }
