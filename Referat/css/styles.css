@@ -3,7 +3,7 @@ body {
 }
 body > header {
     width: 86.85%;
-    height: 85px;
+    height: 100px;
     background-color: #E44D26;
     border-bottom: 6px solid #E44D26;
     margin: 0 0 auto;
@@ -12,9 +12,16 @@ body > header {
     left: 200px;
 }
 
-header h1 {
+header hgroup h1 {
     text-align: center;
     color: #ffffff;
+}
+
+header hgroup h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -13px;
 }
 
 aside {
@@ -55,7 +62,7 @@ aside ul li a:hover {
 main {
     position: absolute;
     width: 86.15%;
-    top: 85px;
+    top: 100px;
     left: 200px;
 }
 
