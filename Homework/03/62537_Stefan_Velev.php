@@ -3,12 +3,10 @@
 require_once 'Db.php';
 
 function isValidId(string $id) : bool {
-
-    return ctype_digit($id) && (int) $id > 0;
+    return ctype_digit($id);
 }
 
-function getUser(string $id) {
-
+function getUser(string $id) : ?array {
     $id = trim($id);
 
     if (!isValidId($id)) {
@@ -24,7 +22,3 @@ function getUser(string $id) {
 
     return $potentialUser ?: null;
 }
-
-$response = getUser("  1     ");
-
-var_dump($response);
