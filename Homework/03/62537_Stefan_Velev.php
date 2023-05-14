@@ -18,7 +18,7 @@ function getUser(string $id) : ?array {
     $selectStatement = $connection->prepare("SELECT * FROM `users` WHERE id = ?");
     $selectStatement->execute([$id]);
 
-    $potentialUser = $selectStatement->fetch();
+    $potentialUser = $selectStatement->fetch(PDO::FETCH_ASSOC);
 
     return $potentialUser ?: null;
 }
