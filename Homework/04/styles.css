@@ -1,0 +1,42 @@
+#registration-form-div {
+    text-align: center;
+}
+
+#registration-form h1 {
+    font-size: 40px;
+}
+
+#all-inputs {
+
+}
+
+.field {
+
+}
+
+#registration-form label {
+    font-size: 20px;
+}
+
+#registration-form input {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 20%;
+    height: 30px;
+}
+
+#registration-form input[type="submit"] {
+    height: 36px;
+}
+
+.error {
+    color: #f00;
+    font-size: 20px;
+}
+
+#success {
+    color: #008c00;
+    font-size: 20px;
+    margin-top: 12px;
+}
