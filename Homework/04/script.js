@@ -5,8 +5,6 @@ const nameInputElement = document.getElementById('name');
 const familyNameInputElement = document.getElementById('family-name');
 const emailInputElement = document.getElementById('email');
 const passwordInputElement = document.getElementById('password');
-const streetInputElement = document.getElementById('street');
-const cityInputElement = document.getElementById('city');
 const postalCodeInputElement = document.getElementById('postal-code');
 
 formElement.addEventListener('submit', function (event) {
@@ -21,64 +19,46 @@ formElement.addEventListener('submit', function (event) {
     const successResponse = document.getElementById('success');
     successResponse.style.display = 'none';
 
-    // const successResponse = document.querySelectorAll('#success');
-    // successResponse.forEach((successMessage) => {
-    //     successMessage.style.display = 'none';
-    // });
-
-
     const userNameValue = userNameInputElement.value;
     const nameValue = nameInputElement.value;
     const familyNameValue = familyNameInputElement.value;
     const emailValue = emailInputElement.value;
     const passwordValue = passwordInputElement.value;
-    const streetValue = streetInputElement.value;
-    const cityValue = cityInputElement.value;
     const postalCodeValue = postalCodeInputElement.value;
 
-    // console.log(emailValue);
-
-    var isThereError = false;
+    let isAvailableError = false;
 
     if (isWrongFormatUserName(userNameValue)) {
         visualizeError(userNameInputElement, 'Невалидно потребителско име. Трябва да е между 3 и 10 симовла.');
-        isThereError = true;
+        isAvailableError = true;
     }
 
     if (isWrongFormatName(nameValue)) {
         visualizeError(nameInputElement, 'Невалидно име. Трябва да бъде максимум 50 символа.');
-        isThereError = true;
+        isAvailableError = true;
     }
-
-
 
     if (isWrongFormatName(familyNameValue)) {
         visualizeError(familyNameInputElement, 'Невалидна фамилия. Трябва да бъде максимум 50 символа.');
-        isThereError = true;
+        isAvailableError = true;
     }
-
-
 
     if (isWrongFormatEmail(emailValue)) {
         visualizeError(emailInputElement, 'Невалиден имейл. Трябва да въведете валиден имейл формат.');
-        isThereError = true;
+        isAvailableError = true;
     }
-
-
 
     if (isWrongFormatPassword(passwordValue)) {
         visualizeError(passwordInputElement, 'Невалидна парола. Паролата трябва да бъде между 6 и 10 символа и трябва да включва поне една главна буква, малка буква и цифра.');
-        isThereError = true;
+        isAvailableError = true;
     }
-
-
 
     if (postalCodeValue !== "" && isWrongFormatPostalCode(postalCodeValue)) {
         visualizeError(postalCodeInputElement, 'Невалиден пощенски код. Трябва да бъде във формат 11111-1111 (само цифри) или формат 1111(само цифри).');
-        isThereError = true;
+        isAvailableError = true;
     }
 
-    if (isThereError) {
+    if (isAvailableError) {
         return;
     }
 
@@ -90,13 +70,6 @@ formElement.addEventListener('submit', function (event) {
                 document.getElementById('success').style.display = 'block';
             }
         })
-
-    // if (doesUserAlreadyExist(userNameValue)) {
-    //     visualizeError(userNameInputElement, 'Нввалидно потребителско име. Вече съществува потребител с такова потребителско име.');
-    //     return;
-    // }
-    //
-    // document.getElementById('success').style.display = 'block';
 });
 
 function visualizeError(inputElementToDisplayAfter, errorMessage) {
@@ -106,12 +79,10 @@ function visualizeError(inputElementToDisplayAfter, errorMessage) {
 
     if (errorDiv.nextSibling) {
         const nextSiblingInputElement = errorDiv.nextSibling;
-
         inputElementToDisplayAfter.parentNode.insertBefore(errorDiv, nextSiblingInputElement);
     } else {
         inputElementToDisplayAfter.parentNode.appendChild(errorDiv);
     }
-
 }
 
 function isWrongFormatUserName(username) {
@@ -128,6 +99,7 @@ function isWrongFormatEmail(email) {
 }
 
 function isWrongFormatPassword(password) {
+
     //Check for length
     if (password.length < 6 || password.length > 10) {
         return true;
@@ -148,7 +120,7 @@ function isWrongFormatPassword(password) {
         return true;
     }
 
-    //If here, then password is in valid format
+    //If got here, then password is in valid format
     return false;
 }
 
@@ -159,9 +131,9 @@ function isWrongFormatPostalCode(postalCode) {
         return true;
     }
 
-    //If with length of four, check for containing only digits
+    //If with length four, check for containing only digits
     if (postalCode.length === 4 && !/^\d+$/.test(postalCode)) {
-        return  true;
+        return true;
     }
 
     //Check for '-' at right position and only numbers on other positions
@@ -170,7 +142,7 @@ function isWrongFormatPostalCode(postalCode) {
         return true;
     }
 
-    //If here, then postalCode is in valid format
+    //If got here, then postalCode is in valid format
     return false;
 }
 
@@ -182,7 +154,6 @@ function doesUserAlreadyExist(username) {
             return usernamesCollection.includes(username);
         })
         .catch(error => {
-            console.error(error);
             return false;
         });
 }

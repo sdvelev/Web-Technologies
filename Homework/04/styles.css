@@ -6,14 +6,6 @@
     font-size: 40px;
 }
 
-#all-inputs {
-
-}
-
-.field {
-
-}
-
 #registration-form label {
     font-size: 20px;
 }
@@ -33,6 +25,7 @@
 .error {
     color: #f00;
     font-size: 20px;
+    margin-top: 5px;
 }
 
 #success {
