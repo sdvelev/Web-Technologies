@@ -29,6 +29,7 @@
 }
 
 #success {
+    display: none;
     color: #008c00;
     font-size: 20px;
     margin-top: 12px;
